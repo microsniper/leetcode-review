@@ -1,0 +1,35 @@
+
+server:
+  port: 8080
+  servlet:
+    context-path: /algorithm
+spring:
+  application:
+    name: algorithm
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/algorithm?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: root
+    initial-size: 10
+    max-active: 100
+    min-idle: 10
+    max-wait: 60000
+    pool-prepared-statements: true
+    max-pool-prepared-statement-per-connection-size: 20
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    hikari:
+      max-lifetime: 60000
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1 # ??????(??? 1)
+      logic-not-delete-value: 0 # ??????(??? 0)
+logging:
+  level:
+    root: info
+    com.sniper.algorithm.mapper: debug
+
