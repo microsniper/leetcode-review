@@ -43,13 +43,13 @@ public class InitData {
         StringBuilder path = builder
                 .append("src").append(File.separator).append("main").append(File.separator).append("java")
                 .append(File.separator).append("com").append(File.separator).append("sniper").append(File.separator)
-                .append("algorithm").append(File.separator).append("AlgorithmTest.java");
+                .append("leetcodereview").append(File.separator).append("AlgorithmTest.java");
         File file = new File(path.toString());
         if (file.exists()){
             file.delete();
         }
         FileAppender appender = new FileAppender(file, 16,true);
-        appender.append("package com.sniper.algorithm;");
+        appender.append("package com.sniper.leetcodereview;");
         appender.append("\n");
 
         appender.append("/*");
