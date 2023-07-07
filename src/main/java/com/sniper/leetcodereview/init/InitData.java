@@ -32,11 +32,11 @@ public class InitData {
     @Autowired
     private AlgorithmService algorithmService;
 
-    public void init() {
-        Result<Algorithm> result = algorithmService.findAny();
+    public void init(String topic) {
+        Result<Algorithm> result = algorithmService.findOne(topic);
         Algorithm algorithm = result.getData();
         if (ObjectUtil.isEmpty(algorithm)){
-
+            return;
         }
         System.out.println(algorithm.getTopic());
         StringBuilder builder = new StringBuilder();

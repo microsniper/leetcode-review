@@ -22,9 +22,9 @@ public class AlgorithmController {
     private AlgorithmService algorithmService;
 
 
-    @GetMapping("/findAny")
-    public Result<Algorithm> findAny(){
-        return algorithmService.findAny();
+    @GetMapping("/findOne")
+    public Result<Algorithm> findOne(String topic){
+        return algorithmService.findOne(topic);
     }
 
     @PostMapping("list")

@@ -79,8 +79,12 @@ public class AlgorithmServiceImpl extends ServiceImpl<AlgorithmMapper, Algorithm
     }
 
     @Override
-    public Result<Algorithm> findAny() {
-        List<Algorithm> algorithmList = baseMapper.selectList(new QueryWrapper<>());
+    public Result<Algorithm> findOne(String topic) {
+        LambdaQueryWrapper<Algorithm> query = new LambdaQueryWrapper<>();
+        if (StrUtil.isNotEmpty(topic)){
+            query.like(Algorithm::getTopic,topic);
+        }
+        List<Algorithm> algorithmList = baseMapper.selectList(query);
         if (CollectionUtil.isNotEmpty(algorithmList)){
             int i = RandomUtil.randomInt(0, algorithmList.size());
             return ResultWrap.getSuccess(algorithmList.get(i));

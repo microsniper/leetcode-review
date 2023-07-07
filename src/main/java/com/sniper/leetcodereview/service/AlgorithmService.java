@@ -16,5 +16,5 @@ public interface AlgorithmService extends IService<Algorithm> {
 
     Result<String> del(Integer algorithmId);
 
-    Result<Algorithm> findAny();
+    Result<Algorithm> findOne(String topic);
 }
