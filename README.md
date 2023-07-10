@@ -21,7 +21,7 @@ Mybatis-Plus | ORM框架 | https://mybatis.plus/guide/
 **开发环境**
 
 工具 | 版本号      | 下载                        
----- |----------|---------------------------  
+---- |----------|---------------------------      
 JDK  | 1.8      | https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 Mysql | 5.7      | https://www.mysql.com/
 
@@ -44,8 +44,10 @@ Vue项目地址：https://github.com/microsniper/algorithm
 找到单元测试类,执行 `init()` 方法,会在 `com.sniper.leetcodereview` 包下随机获取一道题生成一个 `AlgorithmTest`类
 ![图片地址](http://sniper-blog.oss-cn-beijing.aliyuncs.com/blogImage/leetcode-review-/1687880216-leetcode-review-03.png)
 
-![图片地址](http://sniper-blog.oss-cn-beijing.aliyuncs.com/blogImage/leetcode-review-/1687880566-leetcode-review-04.png)
+![图片地址](http://sniper-blog.oss-cn-beijing.aliyuncs.com/blogImage/leetcode-review-/1688997278-leetcode-review-05.png)
 
+`AlgorithmTest`
+![图片地址](http://sniper-blog.oss-cn-beijing.aliyuncs.com/blogImage/leetcode-review-/1688997447-leetcode-review-06.png)
 此时就可以愉快的做题了！！
 
 `如果感觉不错，给个 star 吧`
