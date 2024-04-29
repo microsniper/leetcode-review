@@ -1,9 +1,12 @@
 package com.sniper.leetcodereview;
 
+import com.sniper.leetcodereview.common.service.RedisService;
 import com.sniper.leetcodereview.init.InitData;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import javax.annotation.Resource;
 
 @SpringBootTest
 public class LeetcodeReviewApplicationTests {
@@ -25,6 +28,14 @@ public class LeetcodeReviewApplicationTests {
     @Test
     public void findOne(){
         initData.init("两数");
+    }
+
+    /**
+     * 按顺序获取
+     */
+    @Test
+    public void findOneByOrder(){
+        initData.findOneByOrder();
     }
 
 }

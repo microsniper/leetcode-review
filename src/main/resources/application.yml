@@ -1,6 +1,6 @@
 
 server:
-  port: 8080
+  port: 8091
   servlet:
     context-path: /algorithm
 spring:
@@ -21,6 +21,10 @@ spring:
     min-evictable-idle-time-millis: 300000
     hikari:
       max-lifetime: 60000
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   global-config:
@@ -31,5 +35,5 @@ mybatis-plus:
 logging:
   level:
     root: info
-    com.sniper.algorithm.mapper: debug
+    com.sniper.leetcodereview.mapper: debug
 

@@ -12,14 +12,20 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sniper.leetcodereview.common.Result;
 import com.sniper.leetcodereview.common.ResultCode;
 import com.sniper.leetcodereview.common.ResultWrap;
+import com.sniper.leetcodereview.common.exception.BaseException;
+import com.sniper.leetcodereview.common.service.RedisService;
 import com.sniper.leetcodereview.entity.Algorithm;
 import com.sniper.leetcodereview.entity.dto.AlgorithmDTO;
 import com.sniper.leetcodereview.mapper.AlgorithmMapper;
 import com.sniper.leetcodereview.service.AlgorithmService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.function.Function;
 
 /**
  * @Description TODO
@@ -28,6 +34,11 @@ import java.util.List;
  **/
 @Service
 public class AlgorithmServiceImpl extends ServiceImpl<AlgorithmMapper, Algorithm> implements AlgorithmService {
+
+    private static String ALGORITHM_KEY = "algorithm:id";
+    @Resource
+    private RedisService redisService;
+
 
     @Override
     public Result<IPage<Algorithm>> List(AlgorithmDTO algorithm) {
@@ -90,5 +101,27 @@ public class AlgorithmServiceImpl extends ServiceImpl<AlgorithmMapper, Algorithm
             return ResultWrap.getSuccess(algorithmList.get(i));
         }
         return ResultWrap.getSuccess();
+    }
+
+    @Override
+    public Result<Algorithm> findOneByOrder() {
+        Integer pageNum = (Integer)redisService.get(ALGORITHM_KEY);
+
+        pageNum = Optional.ofNullable(pageNum).orElse(1);
+        Page<Algorithm> page = new Page<>(pageNum,1);
+        LambdaQueryWrapper<Algorithm> query = new LambdaQueryWrapper<>();
+        List<Algorithm> algorithmList = baseMapper.selectPage(page, query).getRecords();
+
+
+        Algorithm algorithm = Optional.ofNullable(algorithmList)
+                .map(l -> l.stream().findFirst().orElseGet(() -> null))
+                .orElseGet(() -> null);
+
+        Long count = baseMapper.selectCount(query);
+        if (++pageNum > count){
+            pageNum = 1;
+        }
+        redisService.set(ALGORITHM_KEY,pageNum);
+        return ResultWrap.getSuccess(algorithm);
     }
 }

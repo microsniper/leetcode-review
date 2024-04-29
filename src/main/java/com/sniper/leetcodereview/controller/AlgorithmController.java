@@ -27,6 +27,10 @@ public class AlgorithmController {
         return algorithmService.findOne(topic);
     }
 
+    public Result<Algorithm> findOneByOrder(){
+        return algorithmService.findOneByOrder();
+    }
+
     @PostMapping("list")
     public Result<IPage<Algorithm>> List(@RequestBody @Validated AlgorithmDTO algorithm){
         return algorithmService.List(algorithm);

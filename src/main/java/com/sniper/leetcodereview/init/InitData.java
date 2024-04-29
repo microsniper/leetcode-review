@@ -10,6 +10,7 @@ import com.sniper.leetcodereview.entity.Algorithm;
 import com.sniper.leetcodereview.entity.dto.AlgorithmDTO;
 import com.sniper.leetcodereview.enums.ResultEnums;
 import com.sniper.leetcodereview.service.AlgorithmService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,6 +27,7 @@ import java.util.Optional;
  * @Author sniper
  * @Date 2023/6/19 11:48 PM
  **/
+@Slf4j
 @Component
 public class InitData {
 
@@ -38,7 +40,22 @@ public class InitData {
         if (ObjectUtil.isEmpty(algorithm)){
             return;
         }
-        System.out.println(algorithm.getTopic());
+        log.info("题目：{}",algorithm.getTopic());
+        builderJavaFile(algorithm);
+
+    }
+
+    public void findOneByOrder(){
+        Result<Algorithm> result = algorithmService.findOneByOrder();
+        Algorithm algorithm = result.getData();
+        if (ObjectUtil.isEmpty(algorithm)){
+            return;
+        }
+        log.info("题目：{}",algorithm.getTopic());
+        builderJavaFile(algorithm);
+    }
+
+    private void builderJavaFile(Algorithm algorithm) {
         StringBuilder builder = new StringBuilder();
         StringBuilder path = builder
                 .append("src").append(File.separator).append("main").append(File.separator).append("java")
@@ -84,6 +101,8 @@ public class InitData {
         appender.append("}");
         appender.flush();
     }
+
+
 
 
 }
