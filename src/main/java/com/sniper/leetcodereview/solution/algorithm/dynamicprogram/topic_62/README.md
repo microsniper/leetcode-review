@@ -18,7 +18,7 @@
 <p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
-<img src="" style="width: 400px; height: 183px;"  alt=""/>
+<img src="https://github.com/microsniper/leetcode-review/blob/master/src/main/java/com/sniper/leetcodereview/solution/algorithm/dynamicprogram/topic_62/img.png" style="width: 400px; height: 183px;"  alt=""/>
 <pre>
 <strong>输入：</strong>m = 3, n = 7
 <strong>输出：</strong>28</pre>
