@@ -1,7 +1,7 @@
 package com.sniper.leetcodereview.solution.leetcode.topic_2;
 
 /**
- * @Description 两数之和
+ * @Description 两数相加
  * @Author sniper
  * @Date 2024/6/30 6:02 PM
  **/
