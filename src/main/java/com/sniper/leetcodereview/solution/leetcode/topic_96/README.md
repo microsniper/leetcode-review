@@ -13,7 +13,7 @@
 <p> </p>
 
 <p><strong>示例 1：</strong></p>
-<img alt="" src="" style="width: 600px; height: 148px;" />
+<img alt="" src="https://github.com/microsniper/leetcode-review/blob/master/src/main/java/com/sniper/leetcodereview/solution/leetcode/topic_96/image/img.png" style="width: 600px; height: 148px;" />
 <pre>
 <strong>输入：</strong>n = 3
 <strong>输出：</strong>5
