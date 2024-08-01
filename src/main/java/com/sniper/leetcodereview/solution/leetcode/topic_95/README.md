@@ -15,7 +15,7 @@
 <div class="original__bRMd">
 <div>
 <p><strong>示例 1：</strong></p>
-<img alt="" src="" style="width: 600px; height: 148px;" />
+<img alt="" src="https://github.com/microsniper/leetcode-review/blob/master/src/main/java/com/sniper/leetcodereview/solution/leetcode/topic_95/image/img.png" style="width: 600px; height: 148px;" />
 <pre>
 <strong>输入：</strong>n = 3
 <strong>输出：</strong>[[1,null,2,null,3],[1,null,3,2],[2,1,3],[3,1,null,null,2],[3,2,null,1]]
