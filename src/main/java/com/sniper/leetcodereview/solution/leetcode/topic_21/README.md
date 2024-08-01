@@ -13,7 +13,7 @@
 <p> </p>
 
 <p><strong>示例 1：</strong></p>
-<img alt="" src="" style="width: 662px; height: 302px;" />
+<img alt="" src="https://github.com/microsniper/leetcode-review/blob/master/src/main/java/com/sniper/leetcodereview/solution/leetcode/topic_21/image/img.png" style="width: 662px; height: 302px;" />
 <pre>
 <strong>输入：</strong>l1 = [1,2,4], l2 = [1,3,4]
 <strong>输出：</strong>[1,1,2,3,4,4]
