@@ -21,7 +21,7 @@
 
 <p><strong>示例 1：</strong></p>
 
-<p><img alt="" src="" /></p>
+<p><img alt="" src="https://github.com/microsniper/leetcode-review/blob/master/src/main/java/com/sniper/leetcodereview/solution/leetcode/topic_11/image/img.png" /></p>
 
 <pre>
 <strong>输入：</strong>[1,8,6,2,5,4,8,3,7]
