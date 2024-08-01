@@ -13,7 +13,7 @@
 <p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
-<img alt="" src="" style="width: 354px; height: 291px;" />
+<img alt="" src="https://github.com/microsniper/leetcode-review/blob/master/src/main/java/com/sniper/leetcodereview/solution/leetcode/topic_101/image/img.png" style="width: 354px; height: 291px;" />
 <pre>
 <strong>输入：</strong>root = [1,2,2,3,4,4,3]
 <strong>输出：</strong>true
