@@ -6,7 +6,7 @@ package com.sniper.leetcodereview.solution.leetcode.topic_21;
  * @Date 2024/7/4 4:35 PM
  **/
 public class Solution {
-    // 回溯
+
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null){
             return list2;

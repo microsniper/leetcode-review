@@ -11,7 +11,7 @@ import java.util.List;
  * @Date 2024/7/31 3:03 PM
  **/
 public class Solution {
-    // 递归
+
 
     public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();

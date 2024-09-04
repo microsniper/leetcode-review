@@ -6,7 +6,7 @@ package com.sniper.leetcodereview.solution.leetcode.topic_5;
  * @Date 2024/7/1 3:55 PM
  **/
 public class Solution {
-    // 动态规划
+
     public static String longestPalindrome(String s) {
         int len = s.length();
         boolean[][] dp = new boolean[len][len];

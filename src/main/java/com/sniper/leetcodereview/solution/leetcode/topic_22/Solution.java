@@ -9,7 +9,7 @@ import java.util.List;
  * @Date 2024/7/3 4:37 PM
  **/
 public class Solution {
-    // 回溯
+
     public static List<String> generateParenthesis(int n) {
         List<String> res = new ArrayList<>();
         backGenerateParenthesis(n,res,"",0,0);

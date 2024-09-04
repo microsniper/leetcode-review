@@ -8,7 +8,7 @@ import java.util.*;
  * @Date 2024/7/2 12:15 AM
  **/
 public class Solution {
-    // hash
+
     public List<List<String>> groupAnagrams(String[] strs) {
         int len = strs.length;
 

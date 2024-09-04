@@ -6,7 +6,7 @@ package com.sniper.leetcodereview.solution.leetcode.topic_11;
  * @Date 2024/7/2 7:54 PM
  **/
 public class Solution {
-    // 双指针
+
     public static int maxArea(int[] height) {
         int len = height.length;
         int left = 0;

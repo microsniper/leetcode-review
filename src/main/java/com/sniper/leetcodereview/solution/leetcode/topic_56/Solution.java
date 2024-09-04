@@ -10,7 +10,7 @@ import java.util.List;
  * @Date 2024/7/21 10:59 PM
  **/
 public class Solution {
-    // 排序
+
     public int[][] merge(int[][] intervals) {
         int len = intervals.length;
         if (intervals == null || intervals.length < 2){

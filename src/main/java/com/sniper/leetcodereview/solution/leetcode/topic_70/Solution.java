@@ -6,7 +6,7 @@ package com.sniper.leetcodereview.solution.leetcode.topic_70;
  * @Date 2024/7/24 11:45 AM
  **/
 public class Solution {
-    // 动态规划
+
     public static int climbStairs(int n) {
         if (n == 1){
             return 1;

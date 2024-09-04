@@ -1,16 +1,16 @@
 
 <!-- problem:start -->
 
-# 15. 三数之和
+# 15. 电话号码的字母组合
 
-
+回溯
 ## 题目描述
 
 <!-- description:start -->
 
-<p>给你一个整数数组 <code>nums</code> ，判断是否存在三元组 <code>[nums[i], nums[j], nums[k]]</code> 满足 <code>i != j</code>、<code>i != k</code> 且 <code>j != k</code> ，同时还满足 <code>nums[i] + nums[j] + nums[k] == 0</code> 。请你返回所有和为 <code>0</code> 且不重复的三元组。</p>
+<p>给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
 
-<p><strong>注意：</strong>答案中不可以包含重复的三元组。</p>
+给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。</p>
 
 <p>&nbsp;</p>
 
@@ -19,14 +19,9 @@
 <p><strong>示例 1：</strong></p>
 
 <pre>
-<strong>输入：</strong>nums = [-1,0,1,2,-1,-4]
-<strong>输出：</strong>[[-1,-1,2],[-1,0,1]]
-<strong>解释：</strong>
-nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0 。
-nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0 。
-nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
-不同的三元组是 [-1,0,1] 和 [-1,-1,2] 。
-注意，输出的顺序和三元组的顺序并不重要。
+<strong>输入：</strong>输入：digits = ""
+<strong>输出：</strong>输出：[]
+
 </pre>
 
 <p><strong>示例 2：</strong></p>

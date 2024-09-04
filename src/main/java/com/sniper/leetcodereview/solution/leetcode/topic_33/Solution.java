@@ -6,7 +6,7 @@ package com.sniper.leetcodereview.solution.leetcode.topic_33;
  * @Date 2024/7/16 6:12 PM
  **/
 public class Solution {
-    // 二分查找
+
     public static int search(int[] nums, int target) {
         int n = nums.length;
         int left = 0, right = n - 1;

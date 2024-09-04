@@ -6,7 +6,7 @@ package com.sniper.leetcodereview.solution.leetcode.topic_55;
  * @Date 2024/7/21 4:56 PM
  **/
 public class Solution {
-    // 贪心算法
+
     public boolean canJump(int[] nums) {
         int len = nums.length;
         int rightMost = 0;

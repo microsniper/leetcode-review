@@ -6,7 +6,7 @@ package com.sniper.leetcodereview.solution.leetcode.topic_64;
  * @Date 2024/7/24 11:25 AM
  **/
 public class Solution {
-    // 动态规划
+
     public static int minPathSum(int[][] grid) {
         int row = grid.length;
         int col = grid[0].length;

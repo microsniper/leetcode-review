@@ -11,7 +11,7 @@ import java.util.Set;
  * @Date 2024/7/19 4:01 PM
  **/
 public class Solution {
-    // 递归 标记位
+
     public static List<List<Integer>> permute(int[] nums) {
         Set<List<Integer>> res = new HashSet<>();
         List<Integer> list = new ArrayList<>();

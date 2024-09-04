@@ -6,7 +6,7 @@ package com.sniper.leetcodereview.solution.leetcode.topic_34;
  * @Date 2024/7/19 3:02 PM
  **/
 public class Solution {
-    // 二分查找
+
     public static int[] searchRange(int[] nums, int target) {
         int len = nums.length;
         int firstIndex = searchFirst(nums,target);

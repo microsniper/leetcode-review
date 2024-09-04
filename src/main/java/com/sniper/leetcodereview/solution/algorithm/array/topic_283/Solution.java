@@ -11,15 +11,15 @@ public class Solution {
         if (len == 0){
             return;
         }
-        int index  = 0;
-        for (int i = 0; i < len; i++) {
+        int index =0;
+        for(int i=0; i<len; i++){
             if (nums[i] != 0){
                 nums[index] = nums[i];
+                if (index != i){
+                    nums[i] = 0;
+                }
                 index++;
             }
-        }
-        for (int i = index; i < len; i++) {
-            nums[i] = 0;
         }
     }
 }

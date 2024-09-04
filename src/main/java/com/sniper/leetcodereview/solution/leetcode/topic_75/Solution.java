@@ -6,7 +6,7 @@ package com.sniper.leetcodereview.solution.leetcode.topic_75;
  * @Date 2024/7/24 3:49 PM
  **/
 public class Solution {
-    // 冒泡
+
     public static void sortColors(int[] nums) {
         int len = nums.length;
         if (len == 1){
