@@ -1,7 +1,5 @@
 package com.sniper.leetcodereview.solution.leetcode.topic_101;
 
-import com.sniper.leetcodereview.AlgorithmTest;
-
 /**
  * @Description
  * @Author sniper

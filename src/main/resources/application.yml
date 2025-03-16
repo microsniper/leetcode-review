@@ -8,9 +8,9 @@ spring:
     name: algorithm
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/algorithm?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://39.105.174.212:2889/algorithm?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
-    password: root
+    password: zpyxy
     initial-size: 10
     max-active: 100
     min-idle: 10
@@ -22,9 +22,9 @@ spring:
     hikari:
       max-lifetime: 60000
   redis:
-    host: 127.0.0.1
-    port: 6379
-    password: 123456
+    host: 39.105.174.212
+    port: 6388
+    password: sniper
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   global-config:
