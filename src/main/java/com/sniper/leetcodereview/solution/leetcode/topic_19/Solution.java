@@ -28,6 +28,31 @@ public class Solution {
 
     }
 
+    public ListNode removeNthFromEnd2(ListNode head, int n) {
+
+        int a = n;
+        ListNode node = new ListNode(0);
+        node.next = head;
+        ListNode left = node;
+        ListNode res = node;
+        ListNode right = node;
+        while (a != 0) {
+            right = right.next;
+            a --;
+        }
+
+        while (right != null && right.next != null){
+            System.out.println(left.val);
+            right = right.next;
+            left = left.next;
+
+        }
+
+
+        left.next = left.next.next;
+        return res.next;
+    }
+
     public static class ListNode{
         ListNode next;
 
