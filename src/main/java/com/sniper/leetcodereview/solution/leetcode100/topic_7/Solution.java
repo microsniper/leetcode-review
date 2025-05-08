@@ -6,21 +6,21 @@ package com.sniper.leetcodereview.solution.leetcode100.topic_7;
  */
 public class Solution {
     public static int test(int x) {
-        int a = 1;
-        long xx = x;
-        if (xx < 0) {
-            a = -1;
-            xx = -xx;
+        int flag = 1;
+        if (x < 0) {
+            x = -x;
+            flag = -1;
         }
 
-        String s = String.valueOf(xx);
-        StringBuilder sb = new StringBuilder(s);
-        sb.reverse();
-        long l = Long.parseLong(sb.toString());
-        if (l > Integer.MAX_VALUE) {
+        long ans = 0;
+        while (x != 0) {
+            ans = ans * 10 + x % 10;
+            x = x / 10;
+        }
+        if (ans > Integer.MAX_VALUE || ans < Integer.MIN_VALUE) {
             return 0;
         }
-        return (int)  l * a;
+        return (int) ans * flag;
     }
 
     public static int test2(int x) {

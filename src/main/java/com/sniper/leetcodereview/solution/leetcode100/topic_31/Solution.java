@@ -6,31 +6,31 @@ package com.sniper.leetcodereview.solution.leetcode100.topic_31;
  * @Date 2024/7/16 4:36 PM
  **/
 public class Solution {
+    // 1 1 5
     public static void nextPermutation(int[] nums) {
-        int n = nums.length;
-        int i = n - 2;
-        for (; i >= 0; --i) {
-            if (nums[i] < nums[i + 1]) {
-                break;
-            }
-        }
-        if (i >= 0) {
-            for (int j = n - 1; j > i; --j) {
-                if (nums[j] > nums[i]) {
-                    swap(nums, i, j);
-                    break;
-                }
-            }
-        }
+        int i = nums.length - 2;
+        while (i >= 0 && nums[i] >= nums[i + 1]) i--;
 
-        for (int j = i + 1, k = n - 1; j < k; ++j, --k) {
-            swap(nums, j, k);
+        if (i >= 0) {
+            int j = nums.length - 1;
+            while (j >= 0 && nums[j] <= nums[i]) j--;
+            swap(nums, i, j);
         }
+        reverse(nums, i + 1);
     }
 
     private static void swap(int[] nums, int i, int j) {
-        int t = nums[j];
-        nums[j] = nums[i];
-        nums[i] = t;
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+    private static void reverse(int[] nums, int start) {
+        int left = start, right = nums.length - 1;
+        while (left < right) {
+            swap(nums, left, right);
+            left++;
+            right--;
+        }
     }
 }

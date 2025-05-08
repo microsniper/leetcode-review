@@ -1,7 +1,11 @@
 package com.sniper.leetcodereview.solution.leetcode200.topic_142;
 
+import com.sniper.leetcodereview.AlgorithmTest;
+
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * sniper
@@ -10,20 +14,15 @@ import java.util.List;
 public class Solution {
 
     public ListNode detectCycle(ListNode head) {
-        if (head == null || head.next == null) {
+        if (head == null) {
             return null;
         }
-
-        List<ListNode> list = new ArrayList<>();
+        Set<ListNode> set = new HashSet<>();
         while (head != null) {
-            if (!list.contains(head)) {
-                list.add(head);
+            if (!set.contains(head)) {
+                set.add(head);
             } else {
-                for (int i =0; i<list.size(); i++) {
-                    if (list.get(i) == head) {
-                        return list.get(i);
-                    }
-                }
+                return head;
             }
             head = head.next;
         }
